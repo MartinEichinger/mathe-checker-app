@@ -20,19 +20,23 @@ var apiRouter    = require('./api/api');
 // require('./config/passport')(passport); // pass passport for configuration
 
 // set up our express application
-app.use(express.static(path.join(__dirname, '../client/build')));
+//app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, 'build')));
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser.json()); // get information from html forms
 
 app.get('/', (req, res) => {
-  res.sendFile('index.html', {root: path.join(__dirname, '../client/build') });
+  //res.sendFile('index.html', {root: path.join(__dirname, '../client/build') });
+  res.sendFile('index.html', {root: path.join(__dirname, 'build') });
 });
 app.get('/calc', (req, res) => {
-  res.sendFile('index.html', {root: path.join(__dirname, '../client/build') });
+  //res.sendFile('index.html', {root: path.join(__dirname, '../client/build') });
+  res.sendFile('index.html', {root: path.join(__dirname, 'build') });
 });
 app.get('/about', (req, res) => {
-  res.sendFile('index.html', {root: path.join(__dirname, '../client/build') });
+  //res.sendFile('index.html', {root: path.join(__dirname, '../client/build') });
+  res.sendFile('index.html', {root: path.join(__dirname, 'build') });
 });
 app.use('/api', apiRouter);
 
