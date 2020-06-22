@@ -17,7 +17,7 @@ db.serialize(() => {
               console.log(err);
         });
 
-  ////////////////////////////////////////   1.KLASSE
+  ////////////////////////////////////////   1.KLASSE ///
   // + Aufgaben für 1.Klasse
   for ( let i=1; i<=10; i++) {
     for ( let j=1; j<=10; j++) {
