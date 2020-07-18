@@ -2,8 +2,9 @@
 
 # dependencies
 /server/node_modules
+/_old
 /client/node_modules
-/client 
+/client
 /.pnp
 .pnp.js
 
