@@ -1,8 +1,0 @@
-{
-  "name": "Mathe Checker App - cheeeks",
-  "description": "App for repeating exercise",
-  "repository": "https://github.com/MartinEichinger/mathe-checker-app",
-  "logo": "https://github.com/MartinEichinger/mathe-checker-app/blob/master/server/favicon.png",
-  "keywords": ["node", "express", "heroku"],
-  "image": "heroku/nodejs"
-}
