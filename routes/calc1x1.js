@@ -9,9 +9,19 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  console.log("routes/calc1x1", req.query);
-  const calc1x1 = await Calc1x1.find(JSON.parse(req.query["0"])).exec();
-  res.send(calc1x1);
+  try {
+    console.log("routes/calc1x1", req.query, Object.keys(req.query).length);
+    let calc1x1;
+    if (Object.keys(req.query).length > 0) {
+      calc1x1 = await Calc1x1.find(JSON.parse(req.query["0"])).exec();
+    } else {
+      calc1x1 = await Calc1x1.find().exec();
+    }
+    res.send(calc1x1);
+  } catch (error) {
+    console.log("routes/calc1x1");
+    return res.status(400).send(error.details[0].message);
+  }
 });
 
 // router.post("/", [auth], async (req, res) => {
