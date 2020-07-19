@@ -18,6 +18,7 @@ router.get("/", async (req, res) => {
     } else {
       console.log("found no query...I send all...");
       calc1x1 = await Calc1x1.find().exec();
+      console.log(calc1x1);
     }
     res.send(calc1x1);
   } catch (error) {
