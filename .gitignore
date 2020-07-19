@@ -14,6 +14,7 @@
 
 # misc
 seed.js
+db-export.json
 uncaughtExceptions.log
 .DS_Store
 .env.local
