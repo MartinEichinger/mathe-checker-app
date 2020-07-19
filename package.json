@@ -4,9 +4,9 @@
   "engines": {
     "node": "12.x"
   },
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
